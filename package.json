@@ -4,5 +4,8 @@
     "@types/chrome": "^0.0.268",
     "prettier": "^3.2.5",
     "typescript": "^5.4.5"
+  },
+  "scripts": {
+    "package": "rm -f pacakge.zip && zip -r package.zip . -x '.git/**' './node_modules/**' '.idea/**' 'yarn.lock' 'package.json' '.gitignore'"
   }
 }
