@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "Search on Perplexity",
+  "version": "1.0",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "omnibox": {
+    "keyword": "p"
+  }
+}
