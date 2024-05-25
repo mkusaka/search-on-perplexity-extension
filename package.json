@@ -1,6 +1,5 @@
 {
   "name": "search-on-perplexity-extension",
-  "packageManager": "yarn@4.2.2",
   "devDependencies": {
     "@types/chrome": "^0.0.268",
     "prettier": "^3.2.5",
