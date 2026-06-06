@@ -18,11 +18,15 @@ jobs:
         uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version-file: ".node-version"
+          cache: pnpm
+          cache-dependency-path: pnpm-lock.yaml
+      - name: Enable Corepack
+        run: corepack enable
       - name: install deps
-        run: yarn install --check-files
+        run: pnpm install --frozen-lockfile
       - name: package
-        run: yarn package
+        run: pnpm run package
       - name: Release
         uses: softprops/action-gh-release@v2
         if: startsWith(github.ref, 'refs/tags/')
